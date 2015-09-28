@@ -1,0 +1,73 @@
+For info, this is the commands for ATS snoop for stations. If want to run, need to login as root.
+Press CTRL-C once want to stop the snoop.
+You can rename the snoop.txt file as per your preference. 
+Then FTP out for FND investigations.
+
+SMS-DBG
+snoop -ta -x 54 dbg-srv01 port 502 | tee snoop.txt
+snoop -ta -x 54 dbg-srv02 port 502 | tee snoop.txt
+
+SMS-BBS
+snoop -ta -x 54 dbg-srv01 port 503 | tee snoop.txt
+snoop -ta -x 54 dbg-srv02 port 503 | tee snoop.txt
+
+SMS-EPN
+snoop -ta -x 54 dbg-srv01 port 504 | tee snoop.txt
+snoop -ta -x 54 dbg-srv02 port 504 | tee snoop.txt
+
+SMS-PMN
+snoop -ta -x 54 nch-srv01 port 503 | tee snoop.txt
+snoop -ta -x 54 nch-srv02 port 503 | tee snoop.txt
+
+SMS-NCH
+snoop -ta -x 54 nch-srv01 port 502 | tee snoop.txt
+snoop -ta -x 54 nch-srv02 port 502 | tee snoop.txt
+
+SMS-SDM
+snoop -ta -x 54 nch-srv01 port 504 | tee snoop.txt
+snoop -ta -x 54 nch-srv02 port 504 | tee snoop.txt
+
+SMS-MBT
+snoop -ta -x 54 dkt-srv01 port 503 | tee snoop.txt
+snoop -ta -x 54 dkt-srv02 port 503 | tee snoop.txt
+
+SMS-DKT
+snoop -ta -x 54 dkt-srv01 port 502 | tee snoop.txt
+snoop -ta -x 54 dkt-srv02 port 502 | tee snoop.txt
+
+SMS-PYL
+snoop -ta -x 54 dkt-srv01 port 504 | tee snoop.txt
+snoop -ta -x 54 dkt-srv02 port 504 | tee snoop.txt
+
+SMS-MPS
+snoop -ta -x 54 tsg-srv01 port 503 | tee snoop.txt
+snoop -ta -x 54 tsg-srv02 port 503 | tee snoop.txt
+
+SMS-TSG
+snoop -ta -x 54 tsg-srv01 port 502 | tee snoop.txt
+snoop -ta -x 54 tsg-srv02 port 502 | tee snoop.txt
+
+SMS-BLY
+snoop -ta -x 54 ser-srv01 port 503 | tee snoop.txt
+snoop -ta -x 54 ser-srv02 port 503 | tee snoop.txt
+
+SMS-SER
+snoop -ta -x 54 ser-srv01 port 502 | tee snoop.txt
+snoop -ta -x 54 ser-srv02 port 502 | tee snoop.txt
+
+SMS-LRC
+snoop -ta -x 54 ser-srv01 port 504 | tee snoop.txt
+snoop -ta -x 54 ser-srv02 port 504 | tee snoop.txt
+
+SMS-BSH
+snoop -ta -x 54 bsh-srv01 port 502 | tee snoop.txt
+snoop -ta -x 54 bsh-srv02 port 502 | tee snoop.txt
+
+SMS-MRM
+snoop -ta -x 54 bsh-srv01 port 503 | tee snoop.txt
+snoop -ta -x 54 bsh-srv02 port 503 | tee snoop.txt
+
+crontab -e
+
+rm /scripts/snoop*
+ls /scripts/
